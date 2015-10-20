@@ -190,7 +190,7 @@
 
                 <div  class="col-md-3">
                 <div id="myAffix">
-                    <nav class="affix" data-toggle="affix" data-spy="affix" data-offset-top="200" data-offset-bottom="50">
+                    <nav class="affix" data-toggle="affix" data-spy="affix" data-offset-top="50" data-offset-bottom="50">
                         <ul class="nav">
                             <li>
                                 <a href="#introduction">Introduction</a>
@@ -288,6 +288,31 @@
 
         <script src="js/jquery-2.1.4.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
+
+
+    <script type="text/javascript">
+
+        $('#myAffix').on('activate.bs.scrollspy', function () {
+            verifyAffixCollapse();
+        });
+
+        $('#myAffix').on('affixed-top.bs.affix', function () {
+            verifyAffixCollapse();
+        });
+
+        // Remove or add collapse class to child navs
+        function verifyAffixCollapse() {
+            $("li .nav").each(function() {
+                if (!$(this).parent().hasClass('active')) {
+                    $(this).addClass('collapse');
+                } else {
+                    $(this).removeClass('collapse');
+                }
+            });
+        }
+
+
+    </script>
 
     </body>
 </html>

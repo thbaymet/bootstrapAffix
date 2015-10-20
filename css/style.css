@@ -1,6 +1,6 @@
 #myAffix {
     position: fixed;
-    top:30px;
+    top:70px;
 }
 
 #myAffix .nav>li>a {
@@ -20,7 +20,6 @@
 }
 
 #myAffix .nav>.active:hover>a, .nav>.active>a {
-    padding-left: 18px;
     font-weight: 700;
     color: #563d7c;
     background-color: transparent;
@@ -28,7 +27,6 @@
 }
 
 #myAffix .nav>.active>a, .nav .nav>.active>a {
-    padding-left: 18px;
     font-weight: 700;
     color: #563d7c;
     background-color: transparent;
@@ -41,14 +39,6 @@
 }
 
 body {
-    padding-bottom: 400px;
+    padding-top: 100px;
+    padding-bottom: 900px;
 }
-
-<script type="text/javascript">
-
-$('#myAffix').on('activate.bs.scrollspy', function () {
-// do something…
-console.info("something is scrolled");
-})
-
-</script>
