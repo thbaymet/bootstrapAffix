@@ -1,0 +1,54 @@
+#myAffix {
+    position: fixed;
+    top:30px;
+}
+
+#myAffix .nav>li>a {
+    padding-top:0;
+    padding-bottom: 0;
+    color:#767676;
+    display: block;
+    font-size: 13px;
+}
+
+#myAffix .nav .nav>li>a {
+    padding-left: 30px;
+}
+
+#myAffix .affix, .affix-bottom {
+    width:213px;
+}
+
+#myAffix .nav>.active:hover>a, .nav>.active>a {
+    padding-left: 18px;
+    font-weight: 700;
+    color: #563d7c;
+    background-color: transparent;
+    border-left: 2px solid #563d7c;
+}
+
+#myAffix .nav>.active>a, .nav .nav>.active>a {
+    padding-left: 18px;
+    font-weight: 700;
+    color: #563d7c;
+    background-color: transparent;
+    border-left: 2px solid #563d7c;
+}
+
+#myAffix .nav>li>a:hover {
+    text-decoration: none;
+    font-size: 13px;
+}
+
+body {
+    padding-bottom: 400px;
+}
+
+<script type="text/javascript">
+
+$('#myAffix').on('activate.bs.scrollspy', function () {
+// do something…
+console.info("something is scrolled");
+})
+
+</script>
